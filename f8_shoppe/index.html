@@ -136,11 +136,55 @@
         <footer class="footer">
         </footer>
     </div>
-
+    <!-- Modal Layout -->
     <div class="modal">
         <div class="modal__overlay"></div>
         <div class="modal__body">
-            <div class="modal__inner"></div>
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">Đăng nhập</span>
+                    </div>
+    
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email...!">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Mật khẩu...!">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập lại mật khẩu...!">
+                        </div>
+                    </div>
+    
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                            <a class="auth-form__text-link" href="">Điều khoản dịch vụ</a> &
+                            <a class="auth-form__text-link" href="">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back btn--normal">Trở lại</button>
+                        <button class="btn btn--primary">Đăng ký</button>
+                    </div>
+                </div>
+    
+                <div class="auth-form_socials">
+                    <a href="" class="auth-form_socials--facebook btn btn--size-s btn--with-icon">
+                        <i class='bx auth-form_socials-icon bxl-facebook'></i>
+                        <span class="auth-form_socials-title">Kết nối với Facebook</span>
+                    </a>
+    
+                    <a href="" class="auth-form_socials--google btn--size-s btn btn--with-icon">
+                        <i class='bx auth-form_socials-icon bxl-google'></i>
+                        <span class="auth-form_socials-title">Kết nối với Google</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Authen form -->
         </div>
     </div>
 </body>
