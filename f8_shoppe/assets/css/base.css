@@ -48,7 +48,7 @@ html {
 
 @keyframes growth {
     from {
-       transform: scale(var(--growth-form));
+        transform: scale(var(--growth-form));
     }
 
     to {
@@ -84,7 +84,7 @@ html {
 }
 
 /* button style */
-.btn{
+.btn {
     min-width: 114px;
     height: 36px;
     text-decoration: none;
@@ -101,17 +101,17 @@ html {
     line-height: 1.6rem;
 }
 
-.btn.btn--normal:hover{
+.btn.btn--normal:hover {
     background-color: rgba(0, 0, 0, 0.09);
 }
 
-.btn.btn--size-s{
+.btn.btn--size-s {
     height: 32px;
     font-size: 1.1rem;
     padding: 0 8px;
 }
 
-.btn.btn--primary{
+.btn.btn--primary {
     background-color: var(--primary-color);
     color: var(--border-color);
 }
