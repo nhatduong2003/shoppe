@@ -13,7 +13,7 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="gird">
+            <div class="grid">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--sparete">
@@ -36,7 +36,7 @@
                         <li class="header__navbar-item">
                             <span class="header__navbar-title--pointer">Kết nối</span>
                             <a href="" class="header__navbar-icon-link">
-                                <i class='header__navbar-icon bx bxl-facebook-circle'></i>
+                                <i class='header__navbar-icon bx bxl-facebook'></i>
                             </a>
                             <a href="" class="header__navbar-icon-link">
                                 <i class='header__navbar-icon bx bxl-instagram'></i>
@@ -291,7 +291,72 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="app__container">
+           <div class="grid">
+            <div class="grid__row app__content">
+                <div class="grid__column-2">
+                    <nav class="category">
+                        <h3 class="category__heading">
+                            <i class='category__heading-icon bx bx-list-ul'></i>
+                            Danh mục
+                        </h3>
+
+                        <ul class="category-list">
+                            <li class="category-item category-item--active">
+                                <a href="#" class="category-item__link">Trang điểm mặt</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Trang điểm môi</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Trang điểm mắt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="grid__column-10">
+                    <div class="home-filter">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <button class="btn home-filter__btn">Phổ biến</button>
+                        <button class="btn home-filter__btn  btn--primary">Mới nhất</button>
+                        <button class="btn home-filter__btn">Bán chạy</button>
+
+                        <div class="select-input">
+                            <span class="select-input__label">
+                                Giá
+                            </span>
+                            <i class='bx bx-chevron-down select-input__icon'></i>
+
+                            <!-- List Option -->
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="#" class="select-input__link">Giá: Từ thấp đến cao</a>
+                                </li>
+
+                                <li class="select-input__item">
+                                    <a href="#" class="select-input__link">Giá: Từ cao đến thấp</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">1</span>/14
+                            </span>
+                            <div class="home-filter__page-control">
+                                <a href="#" class="home-filter__page-btn home-filter__page-btn--disible">
+                                    <i class='home-filter__page-icon bx bx-chevron-left'></i>
+                                </a>
+                                <a href="#" class="home-filter__page-btn">
+                                    <i class='home-filter__page-icon bx bx-chevron-right'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
         </div>
 
         <footer class="footer">
