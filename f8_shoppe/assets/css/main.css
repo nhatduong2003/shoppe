@@ -12,6 +12,7 @@
     list-style: none;
     padding-left: 0;
     margin: 4px 0 0 0;
+    display: flex;
 }
 
 .header__navbar-item {
@@ -20,8 +21,102 @@
     min-height: 26px;
 }
 
+.header__navbar-user{
+    position: relative;
+    display: flex;
+    justify-items: center;
+}
+
+.header__navbar-user-img{
+    width: 18px;
+    height: 18px;
+    border: 1px solid #00d5ff;
+    border-radius: 100%;
+}
+
+.header__navbar-user-name{
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+}
+
+.header__navbar-user-menu{
+    position: absolute;
+    padding-left: 0;
+    top: calc(100% - (-1px));
+    right: 0;
+    width: 160px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    list-style: none;
+    z-index: 1;
+    box-shadow: 0 1px 2.125rem 0 rgba(0, 0, 0, 0.2);
+    border-color: transparent transparent var(--white-color) transparent;
+    display: none;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: -24px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    cursor: pointer;
+}
+
+.header__navbar-user-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    width: 70%;
+    height: 8px;
+ 
+}
+
+.header__navbar-user-item:last-child a{
+    color: #00a6ff;
+}
+
+.header__navbar-user-item{
+}
+
+.header__navbar-user-item--saparate{
+    border-top: 1px solid rgba(238, 75, 43, 0.05);
+}
+
+.header__navbar-user-item a{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 4px 16px;
+    display: block;
+}
+
+.header__navbar-user-item a:hover{
+    background-color: #fafafa;
+    color: #00a6ff;
+}
+
 .header__navbar-item--has-qr:hover .header__qr {
     display: block;
+}
+
+.header__navbar-user-item a:first-child{
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+
+.header__navbar-user-item a:last-child{
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
 }
 
 .header__navbar-item--has-notify:hover .header__notify {
@@ -31,7 +126,7 @@
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -40,7 +135,7 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -71,6 +166,10 @@
     text-decoration: none;
 }
 
+.header__navbar-icon-link:nth-child(2){
+    margin-left: 3px;
+}
+
 .header__navbar-icon {
     font-size: 1.8rem;
     margin: 0 4px;
@@ -86,12 +185,13 @@
     width: 186px;
     background-color: var(--white-color);
     position: absolute;
-    left: 20%;
+    left: 16%;
     top: 118%;
     padding: 8px;
     border-radius: 5px;
     display: none;
     animation: fadeIn ease 0.2 s;
+    z-index: 1;
 }
 
 .header__qr::before {
@@ -140,6 +240,7 @@
     animation: headerNotifyGrowth ease-in 0.3s;
     will-change: opacity, transform;
     display: none;
+    z-index: 1;
 }
 
 @keyframes headerNotifyGrowth {
@@ -389,6 +490,10 @@
 
 .header__logo {
     width: 200px;
+}
+.header__logo-link{
+    color: transparent;
+    text-decoration: none;
 }
 
 .header__logo-img {
@@ -648,7 +753,7 @@
 .header__search-option {
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% + 2px);
     width: 110px;
     list-style: none;
     box-shadow: 0 1px 2px #ccc;
@@ -663,8 +768,8 @@
     position: absolute;
     display: block;
     width: 100%;
-    height: 10px;
-    top: -10px;
+    height: 18px;
+    top: -18px;
     left: 0;
 }
 
@@ -676,6 +781,10 @@
 .header__search-option-item:hover {
     background-color: #fafafa;
     cursor: pointer;
+}
+
+.header__search-option-item:hover span{
+    color: #00a6ff;
 }
 
 .header__search-option-item:first-child {
@@ -742,6 +851,10 @@
 
 .header__search-history-item:hover {
     background-color: #fafafa;
+}
+
+.header__search-history-item:hover a{
+    color: #00a6ff;
 }
 
 .header__search-history-item a {
